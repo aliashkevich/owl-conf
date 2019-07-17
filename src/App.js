@@ -49,11 +49,6 @@ class App extends React.Component {
             <Header />
 
             <About />
-            <Speakers />
-            <Timetable timetable={this.state.timetable} />
-            <Address />
-            <Jobs />
-            <Footer />
           </React.Fragment>
         )}
       </div>

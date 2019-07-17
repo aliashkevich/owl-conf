@@ -3,6 +3,12 @@ import 'tachyons';
 import './Speakers.css';
 
 export default class Speakers extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      speakers: [],
+    };
+  }
   render() {
     return (
       <div className='container'>
@@ -14,7 +20,7 @@ export default class Speakers extends React.Component {
               src='https://upload.wikimedia.org/wikipedia/commons/6/66/An_up-close_picture_of_a_curious_male_domestic_shorthair_tabby_cat.jpg'
               alt=''
             />
-            <h2>Name: Mark Erikson</h2>
+            <h2>Name: example</h2>
             <p>Role: Software Engineer @ Northrop Grumman Corporation</p>
             <p>Topic: A Deep Dive into React-Redux</p>
           </div>

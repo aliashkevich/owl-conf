@@ -19,6 +19,7 @@ class App extends React.Component {
       speakers: [],
       timetable: [],
       about: {},
+      loading: true,
     };
   }
 
@@ -32,6 +33,7 @@ class App extends React.Component {
           speakers: data.speakers,
           timetable: data.timetable,
           about: data.about,
+          loading: false,
         });
       })
       .catch(error => console.log(error));
@@ -39,14 +41,21 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Header />
-        <About />
-        <Speakers />
-        <Timetable />
-        <Address />
-        <Jobs />
-        <Footer />
+      <div className='App'>
+        {this.state.loading ? (
+          <React.Fragment>Loading...</React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Header />
+
+            <About />
+            <Speakers />
+            <Timetable timetable={this.state.timetable} />
+            <Address />
+            <Jobs />
+            <Footer />
+          </React.Fragment>
+        )}
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import Timetable from 'react-timetable-events';
+import './Timetable.css';
 
 export default class Schedule extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ export default class Schedule extends React.Component {
 
         var talk = {
           id: j,
-          name: timeslotItem.topic,
+          name: `${timeslotItem.topic.toUpperCase()} (${timeslotItem.venue})`,
           type: 'custom',
           startTime: moment(
             `${date}T${this.convertTime(timeslotItem.starttime)}`,
@@ -81,11 +82,9 @@ export default class Schedule extends React.Component {
       return null;
     } else {
       return (
-        <Timetable
-          events={this.state.events}
-          hoursInterval={[9, 21]}
-          timeLabel={'Schedule'}
-        />
+        <div className='screen schedule'>
+          <Timetable events={this.state.events} hoursInterval={[9, 21]} />
+        </div>
       );
     }
   }

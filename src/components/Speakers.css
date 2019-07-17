@@ -1,0 +1,52 @@
+/* HTML ELEMENTS */
+/*  */
+body {
+  margin: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #27dbb1, #ffdc18, #ff3706);
+  background-size: 600% 120%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+h1 {
+  font: bold 65px/60px Helvetica, Arial, Sans-serif;
+  text-align: center;
+  color: #eee;
+  text-shadow: 0px 2px 6px #333;
+}
+
+h2 {
+  color: #eee;
+}
+
+p {
+  color: #eee;
+}
+
+.speakers {
+  width: 15vw;
+  height: auto;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}

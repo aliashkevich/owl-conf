@@ -41,13 +41,13 @@ class App extends React.Component {
     return (
       <div>
         <Home />
-        {/* <Header />
+        <Header />
         <About />
         <Speakers />
         <Timetable />
         <Address />
         <Jobs />
-        <Footer /> */}
+        <Footer />
       </div>
     );
   }

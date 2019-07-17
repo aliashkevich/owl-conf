@@ -438,14 +438,14 @@ function init(canvas) {
     }
   }
 
-  function doubleClick(e) {
-    for (var i = gravities.length - 1; i >= 0; i--) {
-      if (gravities[i].isMouseOver) {
-        gravities[i].collapse();
-        break;
-      }
-    }
-  }
+  //   function doubleClick(e) {
+  //     for (var i = gravities.length - 1; i >= 0; i--) {
+  //       if (gravities[i].isMouseOver) {
+  //         gravities[i].collapse();
+  //         break;
+  //       }
+  //     }
+  //   }
 
   // Functions
 
@@ -492,7 +492,7 @@ function init(canvas) {
   canvas.addEventListener('mousemove', mouseMove, false);
   canvas.addEventListener('mousedown', mouseDown, false);
   canvas.addEventListener('mouseup', mouseUp, false);
-  canvas.addEventListener('dblclick', doubleClick, false);
+  //   canvas.addEventListener('dblclick', doubleClick, false);
 
   // GUI
 

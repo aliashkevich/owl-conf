@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd')
+    fetch('https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3')
       .then(res => res.json())
       .then(data => {
         this.setState({

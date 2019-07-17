@@ -7,14 +7,8 @@
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
-  position: fixed;
-  justify-content: center;
 }
-.letter {
-  color: whitesmoke;
-  font-size: 30vh;
-  font-family: 'Times New Roman', Times, serif;
-}
+
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%;

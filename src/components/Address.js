@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Location extends React.Component {
+export default class Address extends React.Component {
   render() {
     return (
       <React.Fragment>

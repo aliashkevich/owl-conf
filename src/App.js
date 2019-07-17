@@ -6,7 +6,7 @@ import About from './components/About';
 import Speakers from './components/Speakers';
 import Footer from './components/Footer';
 import Jobs from './components/Jobs';
-import Location from './components/Location';
+import Address from './components/Address';
 import Timetable from './components/Timetable';
 
 class App extends React.Component {
@@ -15,7 +15,7 @@ class App extends React.Component {
 
     this.state = {
       jobs: {},
-      location: {},
+      address: {},
       speakers: [],
       timetable: [],
       about: {},
@@ -28,7 +28,7 @@ class App extends React.Component {
       .then(data => {
         this.setState({
           jobs: data.jobs,
-          location: data.location,
+          address: data.location,
           speakers: data.speakers,
           timetable: data.timetable,
           about: data.about,
@@ -45,7 +45,7 @@ class App extends React.Component {
         <About />
         <Speakers />
         <Timetable />
-        <Location />
+        <Address />
         <Jobs />
         <Footer />
       </div>

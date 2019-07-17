@@ -39,9 +39,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='App'>
-        <Header />
+      <div>
         <Home />
+        <Header />
         <About />
         <Speakers />
         <Timetable />

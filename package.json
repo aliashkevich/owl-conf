@@ -5,7 +5,10 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-strap": "0.0.1",
+    "reactstrap": "^8.0.1",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +30,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "[develop](https://owl-conf.netlify.com/) [![Netlify Status](https://api.netlify.com/api/v1/badges/ca0a3f93-f777-4629-95d7-0836edbcdc1c/deploy-status)](https://app.netlify.com/sites/stupefied-bell-2fbfb2/deploys)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliashkevich/owl-conf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliashkevich/owl-conf/issues"
+  },
+  "homepage": "https://github.com/aliashkevich/owl-conf#readme"
 }

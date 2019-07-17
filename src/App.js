@@ -46,9 +46,7 @@ class App extends React.Component {
           <React.Fragment>Loading...</React.Fragment>
         ) : (
           <React.Fragment>
-            <Header />
-
-            <About />
+            <Home />
           </React.Fragment>
         )}
       </div>

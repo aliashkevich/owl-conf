@@ -7,7 +7,7 @@ import Speakers from './components/Speakers';
 import Footer from './components/Footer';
 import Jobs from './components/Jobs';
 import Address from './components/Address';
-import Timetable from './components/Timetable';
+import Schedule from './components/Schedule';
 
 class App extends React.Component {
   constructor(props) {
@@ -50,7 +50,7 @@ class App extends React.Component {
             <Home />
             <About />
             <Speakers />
-            <Timetable timetable={this.state.timetable} />
+            <Schedule timetable={this.state.timetable} />
             <Address />
             <Jobs />
             <Footer />

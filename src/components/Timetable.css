@@ -2,3 +2,8 @@ div.schedule {
   max-width: 800px;
   margin: 0 auto;
 }
+
+div[class^='styles_event__'] {
+  margin: 10px;
+  border: 1px;
+}

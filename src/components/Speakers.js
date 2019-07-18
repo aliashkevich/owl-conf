@@ -1,48 +1,49 @@
 import React from 'react';
 import 'tachyons';
+import Particles from 'react-particles-js';
 import './Speakers.css';
 
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 50,
+      density: {
+        enable: true,
+        value_area: 900,
+      },
+    },
+    style: {
+      color: 'rgb(51, 155, 196)',
+    },
+  },
+};
+
 export default class Speakers extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      speakers: [],
-    };
-  }
   render() {
+    console.log(this.props.speakers);
     return (
-      <div className='container screen'>
-        <h1>Speakers</h1>
-        <div className='items'>
-          <div className='bg-light-green dib br3 pa3 ma2 bw2 shadow-5 grow'>
-            <img
-              className='speakers'
-              src='https://upload.wikimedia.org/wikipedia/commons/6/66/An_up-close_picture_of_a_curious_male_domestic_shorthair_tabby_cat.jpg'
-              alt=''
-            />
-            <h2>Name: example</h2>
-            <p>Role: Software Engineer @ Northrop Grumman Corporation</p>
-            <p>Topic: A Deep Dive into React-Redux</p>
-          </div>
-          <div className='bg-light-green dib br3 pa3 ma2 bw2 shadow-5 grow'>
-            <img
-              className='speakers'
-              src='https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
-              alt='Netta Bondy'
-            />
-            <h2>Name: Netta Bondy</h2>
-            <p>Role: Web Developer @ Reali</p>
-            <p>Topic: A Deep Dive into React-Redux</p>
-          </div>
-          <div className='bg-light-green dib br3 pa3 ma2 bw2 shadow-5 grow'>
-            <img
-              className='speakers'
-              src='https://peopledotcom.files.wordpress.com/2018/02/two-tone-cat.jpg'
-              alt='David Lorenz'
-            />
-            <h2>Name: David Lorenz</h2>
-            <p>Role: Frontend Developer @ MB.io</p>
-            <p>Topic: A Deep Dive into React-Redux</p>
+      <div>
+        <Particles className='particles' params={particlesOptions} />
+        <div>
+          <h1 className='title'>Speakers</h1>
+          <div className='container'>
+            {this.props.speakers.map(speaker => (
+              <div className='items bg-gray dib br3 pa3 ma2 bw2 shadow-5 grow'>
+                <div className='item__wrapper'>
+                  <img className='speakersImg grow' src={speaker.image} alt='' />
+                  <p>
+                    <span>Name:</span>
+                    {speaker.name}
+                  </p>
+                  <p>
+                    <span>Role:</span> {speaker.role}
+                  </p>
+                  <p>
+                    <span>Topic:</span> {speaker.topic}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

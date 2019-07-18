@@ -46,14 +46,14 @@ class App extends React.Component {
           <React.Fragment>Loading...</React.Fragment>
         ) : (
           <React.Fragment>
-            <Header />
+            {/* <Header />
             <Home />
             <About />
-            <Speakers />
+            <Speakers /> */}
             <Schedule timetable={this.state.timetable} />
-            <Address />
+            {/* <Address />
             <Jobs />
-            <Footer />
+            <Footer /> */}
           </React.Fragment>
         )}
       </div>

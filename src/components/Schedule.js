@@ -10,6 +10,7 @@ import {
 } from 'reactstrap';
 import classnames from 'classnames';
 import './Schedule.css';
+import $ from 'jquery';
 
 export default class Schedule extends React.Component {
   constructor(props) {
@@ -29,27 +30,34 @@ export default class Schedule extends React.Component {
     }
   }
 
+  componentDidMount = () => {
+    $('tr').hide();
+    $('tr').each(function(index) {
+      $(this)
+        .delay(index * 500)
+        .show(1000);
+    });
+  };
+
   render() {
     return (
-      <div className='screen'>
+      <div className='screen schedule'>
         <h1>Schedule</h1>
-        <Nav tabs>
+        <Nav tabs className='center-tabs'>
           {this.props.timetable.map((timetableItem, index) => (
             <React.Fragment>
-              <Col lg='6' className='custom-tab'>
-                <NavItem>
-                  <NavLink
-                    className={classnames({
-                      active: this.state.activeTab === index,
-                    })}
-                    onClick={() => {
-                      this.toggle(index);
-                    }}>
-                    <span>{timetableItem.name}</span>
-                    <p>{timetableItem.date}</p>
-                  </NavLink>
-                </NavItem>
-              </Col>
+              <NavItem>
+                <NavLink
+                  className={classnames({
+                    active: this.state.activeTab === index,
+                  })}
+                  onClick={() => {
+                    this.toggle(index);
+                  }}>
+                  <span className='event'>{timetableItem.name}</span>
+                  <p>{timetableItem.date}</p>
+                </NavLink>
+              </NavItem>
             </React.Fragment>
           ))}
         </Nav>
@@ -57,7 +65,7 @@ export default class Schedule extends React.Component {
           <TabContent activeTab={this.state.activeTab}>
             {this.props.timetable.map((timetableItem, index) => (
               <TabPane tabId={index}>
-                <Table hover id='schedule'>
+                <Table responsive dark id='schedule'>
                   <thead>
                     <tr>
                       <th>Time</th>
@@ -67,11 +75,11 @@ export default class Schedule extends React.Component {
                   </thead>
                   <tbody>
                     {timetableItem.timeslot.map((slot, slotIndex) => (
-                      <tr key={slotIndex}>
+                      <tr key={slotIndex} className={slot.venue.toLowerCase()}>
                         <td>
                           {slot.starttime} - {slot.endtime}
                         </td>
-                        <td>{slot.venue}</td>
+                        <td className='room'>{slot.venue}</td>
                         <td>{slot.topic.toUpperCase()}</td>
                       </tr>
                     ))}

@@ -49,12 +49,12 @@ class App extends React.Component {
           <React.Fragment>
             <Nav />
             <Home />
-            {/* <About /> */}
-            {/* <Speakers /> */}
+            <About />
+            <Speakers />
             <Timetable timetable={this.state.timetable} />
-            {/* <Address /> */}
-            {/* <Jobs />
-            <Footer /> */}
+            <Address />
+            <Jobs />
+            <Footer />
           </React.Fragment>
         )}
       </div>

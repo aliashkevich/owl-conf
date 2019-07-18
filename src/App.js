@@ -53,7 +53,6 @@ class App extends React.Component {
             <Timetable timetable={this.state.timetable} />
             <Address />
             <Jobs />
-            <Footer />
           </React.Fragment>
         )}
       </div>

@@ -31,7 +31,7 @@ const HeaderContainer = styled.div`
 `;
 
 const NavItem = styled.div`
-  color: #2e2d88;
+  color: #4997d0;
   font-size: 20px;
   padding: 20px;
   font-weight: 500;
@@ -78,7 +78,7 @@ const StyledNavLink = styled(NavLink).attrs({
 
 const Header = styled.a`
   text-decoration: none;
-  color: #2e2d88;
+  color: #4997d0;
   font-size: 20px;
   font-weight: 500;
   text-transform: capitalize;
@@ -98,6 +98,7 @@ export default class Nav extends React.Component {
               <NavItem href='/'>About</NavItem>
               <NavItem href='/'>Speakers</NavItem>
               <NavItem href='/'>Schedule</NavItem>
+              <NavItem href='/'>Jobs</NavItem>
               <NavItem href='/'>Map</NavItem>
             </NavList>
           </HeaderContainer>

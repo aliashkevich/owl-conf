@@ -31,7 +31,10 @@ export default class Speakers extends React.Component {
               <div className='items bg-gray dib br3 pa3 ma2 bw2 shadow-5 grow'>
                 <div className='item__wrapper'>
                   <img className='speakersImg grow' src={speaker.image} alt='' />
-                  <h2> {speaker.name}</h2>
+                  <p>
+                    <span>Name:</span>
+                    {speaker.name}
+                  </p>
                   <p>
                     <span>Role:</span> {speaker.role}
                   </p>

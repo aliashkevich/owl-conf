@@ -12,6 +12,7 @@
     "react-particles-js": "^2.6.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-scroll": "^1.7.12",
     "reactstrap": "^8.0.1",
     "styled-components": "^4.3.2",
     "tachyons": "^4.11.1"

@@ -1,13 +1,23 @@
 import React from 'react';
 import './App.css';
 import Home from './components/Home';
-import About from './components/About';
 import Speakers from './components/Speakers';
 import Footer from './components/Footer';
 import Jobs from './components/Jobs';
 import Address from './components/Address';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
+import {Button} from 'reactstrap';
+
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from 'react-scroll';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,6 +31,8 @@ class App extends React.Component {
       about: {},
       loading: true,
     };
+
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   componentDidMount() {
@@ -37,6 +49,23 @@ class App extends React.Component {
         });
       })
       .catch(error => console.log(error));
+
+    Events.scrollEvent.register('begin', function() {
+      console.log('begin', arguments);
+    });
+
+    Events.scrollEvent.register('end', function() {
+      console.log('end', arguments);
+    });
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
   }
 
   render() {
@@ -51,10 +80,13 @@ class App extends React.Component {
             <Speakers speakers={this.state.speakers} />
             <Schedule timetable={this.state.timetable} />
             <Address />
-            <Jobs />
+            <Jobs jobs={this.state.jobs} />
             <Footer />
           </React.Fragment>
         )}
+        <a onClick={this.scrollToTop}>
+          <Button className='to-the-top'>To the top!</Button>
+        </a>
       </div>
     );
   }

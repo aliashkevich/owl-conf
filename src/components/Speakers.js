@@ -30,7 +30,11 @@ export default class Speakers extends React.Component {
             {this.props.speakers.map(speaker => (
               <div className='items bg-gray dib br3 pa3 ma2 bw2 shadow-5 grow'>
                 <div className='item__wrapper'>
-                  <img className='speakersImg grow' src={speaker.image} alt='' />
+                  <img
+                    className='speakersImg grow'
+                    src={speaker.image}
+                    alt=''
+                  />
                   <p>
                     <span>Name:</span>
                     {speaker.name}

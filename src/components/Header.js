@@ -95,11 +95,10 @@ export default class Nav extends React.Component {
           <HeaderContainer>
             <Header href='/'>Owl Conference</Header>
             <NavList>
-              <NavItem href='/'>About</NavItem>
               <NavItem href='/'>Speakers</NavItem>
               <NavItem href='/'>Schedule</NavItem>
-              <NavItem href='/'>Jobs</NavItem>
               <NavItem href='/'>Map</NavItem>
+              <NavItem href='/'>Jobs</NavItem>
             </NavList>
           </HeaderContainer>
         </Wrapper>

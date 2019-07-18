@@ -33,3 +33,10 @@ div.screen {
 h1 {
   display: contents;
 }
+
+button.to-the-top {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 94vh;
+}

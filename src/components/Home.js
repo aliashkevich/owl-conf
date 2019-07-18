@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../images/logo.svg';
 // import car from '../images/car.png';
 import '../styles/Home.css';
+import {Container, Row, Col} from 'reactstrap';
 
 export default class Home extends React.Component {
   render() {

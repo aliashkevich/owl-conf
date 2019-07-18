@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Speakers from './components/Speakers';
@@ -9,6 +8,7 @@ import Jobs from './components/Jobs';
 import Address from './components/Address';
 import Timetable from './components/Timetable';
 import Nav from './components/Header';
+import Mapowl from './components/Map';
 
 class App extends React.Component {
   constructor(props) {
@@ -52,6 +52,7 @@ class App extends React.Component {
             {/* <About /> */}
             {/* <Speakers /> */}
             <Timetable timetable={this.state.timetable} />
+            <Mapowl />
             {/* <Address /> */}
             {/* <Jobs />
             <Footer /> */}

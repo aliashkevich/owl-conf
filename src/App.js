@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Jobs from './components/Jobs';
 import Address from './components/Address';
 import Timetable from './components/Timetable';
+import Nav from './components/Header';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class App extends React.Component {
           <React.Fragment>Loading...</React.Fragment>
         ) : (
           <React.Fragment>
-            <Header />
+            <Nav />
             <Home />
             <About />
             <Speakers speakers={this.state.speakers} />

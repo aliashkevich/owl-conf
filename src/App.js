@@ -49,7 +49,7 @@ class App extends React.Component {
             <Nav />
             <Home />
             <About />
-            <Speakers /> */}
+            <Speakers />
             <Schedule timetable={this.state.timetable} />
             <Address />
             <Jobs />

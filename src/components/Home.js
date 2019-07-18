@@ -6,11 +6,10 @@ import '../styles/Home.css';
 export default class Home extends React.Component {
   render() {
     return (
-      <div className='body-home'>
+      <div className='body-home screen'>
         {/* <div className='car'>
           <img src={car} alt='car' />
         </div> */}
-        <h1>Owl Conference</h1>
         <h2>The current state of Software Development at MB.io</h2>
         <h4>
           Bring it owl. The Owl was a symbol for Athena, goddess of wisdom and

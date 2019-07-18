@@ -25,3 +25,11 @@
     transform: rotate(360deg);
   }
 }
+
+div.screen {
+  min-height: 100vh;
+}
+
+h1 {
+  display: contents;
+}

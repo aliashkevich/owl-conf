@@ -1,0 +1,50 @@
+.custom-tab {
+  margin: 0;
+  padding: 0 !important;
+}
+
+table#schedule {
+  /* max-width: 1280px; */
+  display: inline-table;
+  width: auto;
+  text-align: left;
+  min-width: 640px;
+}
+
+table#schedule tbody tr {
+  text-align: left;
+}
+
+tr.bertha td.room {
+  /* background-color: dimgray; */
+  color: pink;
+}
+
+tr.carl td.room {
+  /* background-color: grey; */
+  color: aquamarine;
+}
+div.schedule {
+  background-color: #343a40;
+}
+
+span.event {
+  color: #fff;
+  font-size: 20px;
+}
+a.nav-link:hover span.event {
+  color: aqua;
+  font-size: 20px;
+}
+
+a.active {
+  background-color: #343a40 !important;
+}
+
+a.active span {
+  color: greenyellow;
+}
+
+ul.center-tabs {
+  justify-content: center;
+}

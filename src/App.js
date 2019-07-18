@@ -52,7 +52,6 @@ class App extends React.Component {
             <Address />
             <Jobs />
             <Schedule timetable={this.state.timetable} />
-            <Footer />
           </React.Fragment>
         )}
       </div>

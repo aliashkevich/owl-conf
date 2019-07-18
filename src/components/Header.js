@@ -9,15 +9,14 @@ const Wrapper = styled.header`
   border: none;
   color: black;
   justify-content: center;
-  height: 72px;
-  background-color: transparent;
-
-  margin-bottom: 40px;
-  padding-bottom: 5px;
+  height: 65px;
+  background: linear-gradient(to right, #4568dc, #b06ab3);
+  opacity: 0.85;
+  bottom: 0;
   position: fixed;
   width: 100%;
-  top: 0;
   z-index: 99;
+  border-radius: 5px;
 `;
 
 const HeaderContainer = styled.div`
@@ -31,10 +30,12 @@ const HeaderContainer = styled.div`
 `;
 
 const NavItem = styled.div`
-  color: #4997d0;
-  font-size: 20px;
+  color: #0000000;
+  font-size: 25px;
   padding: 20px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
   text-transform: capitalize;
   :hover {
     opacity: 0.5;
@@ -78,8 +79,8 @@ const StyledNavLink = styled(NavLink).attrs({
 
 const Header = styled.a`
   text-decoration: none;
-  color: #4997d0;
-  font-size: 20px;
+  color: #000000;
+  font-size: 25px;
   font-weight: 500;
   text-transform: capitalize;
   :hover {

@@ -15,8 +15,9 @@
 .logo {
   display: flex;
   position: absolute;
-  bottom: 0;
-  right: 0px;
+  justify-content: flex-start;
+  top: 0;
+  margin: 15px;
 }
 @-webkit-keyframes Gradient {
   0% {

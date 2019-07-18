@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3')
+    fetch('https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -48,11 +48,10 @@ class App extends React.Component {
           <React.Fragment>
             <Nav />
             <Home />
-            <About />
-            <Speakers />
-            <Schedule timetable={this.state.timetable} />
+            <Speakers speakers={this.state.speakers} />
             <Address />
             <Jobs />
+            <Schedule timetable={this.state.timetable} />
             <Footer />
           </React.Fragment>
         )}

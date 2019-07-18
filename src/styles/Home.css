@@ -1,26 +1,34 @@
 .body-home {
+  display: flex;
+  background-image: url('../images/Background.png');
+  background-size: cover;
   width: 100wh;
   height: 100vh;
-  color: #fff;
-  background: linear-gradient(-45deg, #d9d6cf, #2d383a, #c8c8cd, #f0f5f5);
-  background-size: 400% 400%;
+  color: whitesmoke;
+  font-family: 'Helvetica';
+  /* background: linear-gradient(-45deg, #d9d6cf, #2d383a, #c8c8cd, #f0f5f5); */
+  background-size: 120% 120%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
 }
-
+.logo {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+}
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 50% 25%;
   }
   100% {
     background-position: 0% 50%;
   }
 }
-
 @-moz-keyframes Gradient {
   0% {
     background-position: 0% 50%;
@@ -45,13 +53,33 @@
   }
 }
 
-h1,
-h6 {
-  font-family: 'Open Sans';
+h1 {
+  font-family: 'Helvetica Arial';
   font-weight: 300;
   text-align: center;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+}
+
+h2 {
+  font-family: 'Helvetica';
+  font-weight: 300;
+  text-align: center;
+  padding: 70px;
   position: absolute;
   top: 45%;
   right: 0;
   left: 0;
+}
+
+h4 {
+  font-family: 'Helvetica';
+  font-weight: 100;
+  text-align: center;
+  padding: 17px;
+  position: absolute;
+  top: 45%;
+  margin: auto;
 }

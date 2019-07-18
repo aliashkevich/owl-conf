@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Speakers from './components/Speakers';
@@ -8,6 +7,7 @@ import Footer from './components/Footer';
 import Jobs from './components/Jobs';
 import Address from './components/Address';
 import Schedule from './components/Schedule';
+import Nav from './components/Header';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,14 +46,14 @@ class App extends React.Component {
           <React.Fragment>Loading...</React.Fragment>
         ) : (
           <React.Fragment>
-            {/* <Header />
+            <Nav />
             <Home />
             <About />
             <Speakers /> */}
             <Schedule timetable={this.state.timetable} />
-            {/* <Address />
+            <Address />
             <Jobs />
-            <Footer /> */}
+            <Footer />
           </React.Fragment>
         )}
       </div>

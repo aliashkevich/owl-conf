@@ -4,15 +4,10 @@
 }
 
 table#schedule {
-  /* max-width: 1280px; */
   display: inline-table;
   width: auto;
   text-align: left;
   min-width: 640px;
-}
-
-table#schedule tbody tr {
-  text-align: left;
 }
 
 tr.bertha td.room {
@@ -26,14 +21,11 @@ tr.carl td.room {
 }
 div.schedule {
   background-color: #343a40;
+  min-height: 100vh;
 }
 
 span.event {
   color: #fff;
-  font-size: 20px;
-}
-a.nav-link:hover span.event {
-  color: aqua;
   font-size: 20px;
 }
 
@@ -47,4 +39,25 @@ a.active span {
 
 ul.center-tabs {
   justify-content: center;
+  margin-top: 2rem;
+}
+
+a.active span.wrapper {
+  color: #fff;
+  background: linear-gradient(to right, #697dff 10%, #fff 50%, #5bdaff 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }

@@ -4,6 +4,7 @@ import './Speakers.css';
 
 export default class Speakers extends React.Component {
   render() {
+    console.log(this.props.speakers);
     return (
       <div className='container'>
         <h1>Speakers</h1>

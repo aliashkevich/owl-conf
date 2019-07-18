@@ -1,52 +1,83 @@
 /* HTML ELEMENTS */
 /*  */
 body {
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   margin: 0;
+  padding: 0;
 }
-.container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #27dbb1, #ffdc18, #ff3706);
-  background-size: 600% 120%;
-  animation: gradient 16s linear infinite;
-  animation-direction: alternate;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
+.particles {
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
 }
 
-h1 {
+.title {
   font: bold 65px/60px Helvetica, Arial, Sans-serif;
   text-align: center;
   color: #eee;
   text-shadow: 0px 2px 6px #333;
+  position: absolute;
+  top: 100%;
 }
 
 h2 {
-  color: #eee;
+  color: white;
 }
 
 p {
-  color: #eee;
+  color: white;
+  font-size: 23px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.speakers {
-  width: 15vw;
+span {
+  font-weight: bold;
+}
+
+/* .speakersImg {
+  width: 13vw;
   height: auto;
   border-radius: 5px;
-}
+  opacity: 1;
+} */
 
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  margin: 5px;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  margin-top: 5rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.speakersImg {
+  width: 100%;
+  height: 40vh;
+  border-radius: 7px;
+  box-shadow: 5px 5px 15px black;
+}
+
+.items {
+  opacity: 0.8;
+  margin: 10vh;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 23vw;
 }

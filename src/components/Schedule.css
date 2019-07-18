@@ -8,19 +8,32 @@ table#schedule {
   width: auto;
   text-align: left;
   min-width: 640px;
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
+.table-dark td,
+.table-dark tr,
+.table-dark th {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* tr.bertha {
+  background-color: rgba(222, 106, 207, 0.2) !important;
+}
+tr.carl {
+  background-color: rgba(106, 222, 201, 0.2) !important;
+} */
+
 tr.bertha td.room {
-  /* background-color: dimgray; */
-  color: pink;
+  color: #f3f64f;
 }
 
 tr.carl td.room {
-  /* background-color: grey; */
-  color: aquamarine;
+  color: #3ef2ff;
 }
+
 div.schedule {
-  background-color: #343a40;
+  /* background-color: #343a40; */
   min-height: 100vh;
 }
 
@@ -30,11 +43,8 @@ span.event {
 }
 
 a.active {
-  background-color: #343a40 !important;
-}
-
-a.active span {
-  color: greenyellow;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border: 1px;
 }
 
 ul.center-tabs {
@@ -44,7 +54,7 @@ ul.center-tabs {
 
 a.active span.wrapper {
   color: #fff;
-  background: linear-gradient(to right, #697dff 10%, #fff 50%, #5bdaff 60%);
+  background: linear-gradient(to right, #3ef2ff 10%, #f3f64f 50%, #50e605 70%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -52,7 +62,7 @@ a.active span.wrapper {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 8s linear infinite;
+  animation: textclip 6s linear infinite;
   display: inline-block;
 }
 
@@ -60,4 +70,8 @@ a.active span.wrapper {
   to {
     background-position: 200% center;
   }
+}
+
+.nav-item {
+  cursor: pointer;
 }

@@ -35,7 +35,7 @@ export default class Schedule extends React.Component {
     return (
       <div className='screen schedule'>
         <h1>Schedule</h1>
-        <Nav tabs className='center-tabs'>
+        <Nav className='center-tabs'>
           {this.props.timetable.map((timetableItem, index) => (
             <React.Fragment>
               <NavItem>

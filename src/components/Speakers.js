@@ -11,7 +11,7 @@ export default class Speakers extends React.Component {
   }
   render() {
     return (
-      <div className='container'>
+      <div className='container screen'>
         <h1>Speakers</h1>
         <div className='items'>
           <div className='bg-light-green dib br3 pa3 ma2 bw2 shadow-5 grow'>

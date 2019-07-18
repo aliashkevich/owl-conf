@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Speakers from './components/Speakers';
 import Footer from './components/Footer';
 import Jobs from './components/Jobs';
 import Address from './components/Address';
-import Timetable from './components/Timetable';
+import Schedule from './components/Schedule';
 import Nav from './components/Header';
 
 class App extends React.Component {
@@ -25,7 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd')
+    fetch('https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -51,7 +50,7 @@ class App extends React.Component {
             <Home />
             <About />
             <Speakers />
-            <Timetable timetable={this.state.timetable} />
+            <Schedule timetable={this.state.timetable} />
             <Address />
             <Jobs />
             <Footer />

@@ -7,6 +7,9 @@ export default class Jobs extends React.Component {
     return (
       <div class='wrapper'>
         <div>
+          <div>
+            <h1 className='title'>Jobs</h1>
+          </div>
           <img src={jobs} alt='jobs' className='img' />
           <div className='text'>
             <p>

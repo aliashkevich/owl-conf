@@ -108,3 +108,10 @@ span {
 .block:after {
   filter: blur(50px);
 }
+
+p {
+  margin: 0 !important;
+  margin-top: 25px !important;
+  padding: 0 !important;
+  font-size: 20px !important;
+}

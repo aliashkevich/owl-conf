@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  TabContent,
-  TabPane,
-  Nav,
-  NavItem,
-  NavLink,
-  Table,
-  Col,
-} from 'reactstrap';
+import {TabContent, TabPane, Nav, NavItem, NavLink, Table} from 'reactstrap';
 import classnames from 'classnames';
 import './Schedule.css';
 import $ from 'jquery';
@@ -42,8 +34,8 @@ export default class Schedule extends React.Component {
   render() {
     return (
       <div className='screen schedule'>
-        <h1>Schedule</h1>
-        <Nav tabs className='center-tabs'>
+        <h1 className='title'>Schedule</h1>
+        <Nav className='center-tabs'>
           {this.props.timetable.map((timetableItem, index) => (
             <React.Fragment>
               <NavItem>
@@ -54,7 +46,7 @@ export default class Schedule extends React.Component {
                   onClick={() => {
                     this.toggle(index);
                   }}>
-                  <span className='event'>{timetableItem.name}</span>
+                  <span className='wrapper event'>{timetableItem.name}</span>
                   <p>{timetableItem.date}</p>
                 </NavLink>
               </NavItem>

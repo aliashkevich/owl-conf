@@ -32,4 +32,56 @@ div.screen {
 
 h1 {
   display: contents;
+  color: #fff;
+}
+
+#to-the-top {
+  display: inline-block;
+  background-color: rgba(255, 45, 153, 0.831);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#to-the-top::after {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#to-the-top:hover {
+  cursor: pointer;
+  background-color: #00adef;
+}
+
+#to-the-top:active {
+  background-color: #5f7bda;
+}
+
+#to-the-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#to-the-top i {
+  margin-top: 6px;
+}
+
+i.fa {
+  color: #fff;
+}
+
+div.spinner {
+  top: 50vh;
+  margin-top: 45vh;
 }

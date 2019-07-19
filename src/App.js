@@ -2,11 +2,11 @@ import React from 'react';
 import './App.css';
 import Home from './components/Home';
 import Speakers from './components/Speakers';
-import Jobs from './components/Jobs';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
+import $ from 'jquery';
 import Mapowl from './components/Map';
-import ScrollableAnchor from 'react-scrollable-anchor';
+import {Events, animateScroll as scroll} from 'react-scroll';
 
 class App extends React.Component {
   constructor(props) {
@@ -20,6 +20,8 @@ class App extends React.Component {
       about: {},
       loading: true,
     };
+
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   componentDidMount() {
@@ -36,24 +38,60 @@ class App extends React.Component {
         });
       })
       .catch(error => console.log(error));
+
+    Events.scrollEvent.register('begin', function() {
+      console.log('begin', arguments);
+    });
+
+    Events.scrollEvent.register('end', function() {
+      console.log('end', arguments);
+    });
+
+    var btn = $('#to-the-top');
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, '300');
+    });
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
   }
 
   render() {
     return (
       <div className='App'>
         {this.state.loading ? (
-          <React.Fragment>Loading...</React.Fragment>
+          <div className='spinner'>
+            <i className='fa fa-cog fa-spin fa-3x fa-fw' />
+            <span className='sr-only'>Loading...</span>
+          </div>
         ) : (
           <React.Fragment>
-            <Nav id='section1' />
-            <Home id='section2' />
-            <Jobs id='section3' />
-            <Speakers speakers={this.state.speakers} id='section4' />
-            <Jobs id='section1' />
-            <Schedule timetable={this.state.timetable} id='section5' />
-            <Mapowl id='section6' />
+            <Nav />
+            <Home />
+            <Speakers speakers={this.state.speakers} />
+            <Schedule timetable={this.state.timetable} />
+            <Mapowl />
           </React.Fragment>
         )}
+        <a onClick={this.scrollToTop} id='to-the-top'>
+          <i className='fa fa-chevron-up fa-2x' aria-hidden='true' />
+        </a>
       </div>
     );
   }

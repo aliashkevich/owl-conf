@@ -86,17 +86,8 @@ class App extends React.Component {
             <Home />
             <Speakers speakers={this.state.speakers} />
             <Schedule timetable={this.state.timetable} />
-<<<<<<< HEAD
-            <About />
-            <Speakers />
-            <Timetable timetable={this.state.timetable} />
             <Jobs />
             <Mapowl />
-            <Footer />
-=======
-            <Jobs />
-            <Mapowl />
->>>>>>> feature-jobs
           </React.Fragment>
         )}
         <a onClick={this.scrollToTop} id='to-the-top'>

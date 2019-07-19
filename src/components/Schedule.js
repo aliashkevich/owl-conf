@@ -47,7 +47,7 @@ export default class Schedule extends React.Component {
                     this.toggle(index);
                   }}>
                   <span className='wrapper event'>{timetableItem.name}</span>
-                  <p>{timetableItem.date}</p>
+                  <p className='date'>{timetableItem.date}</p>
                 </NavLink>
               </NavItem>
             </React.Fragment>

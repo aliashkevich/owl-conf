@@ -19,14 +19,14 @@
 .card {
   width: 40vw;
   float: left;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-left: 50px;
   opacity: 0.8;
 }
 .owl {
   width: 40vw;
   float: right;
-  margin-top: 150px;
+  margin-top: 50px;
   margin-left: 50px;
 }
 .title {

@@ -7,7 +7,7 @@ import Jobs from './components/Jobs';
 import Address from './components/Address';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
-import {Button} from 'reactstrap';
+import $ from 'jquery';
 
 import {
   Link,
@@ -36,7 +36,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd')
+    fetch('https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -57,6 +57,21 @@ class App extends React.Component {
     Events.scrollEvent.register('end', function() {
       console.log('end', arguments);
     });
+
+    var btn = $('#to-the-top');
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, '300');
+    });
   }
 
   scrollToTop() {
@@ -72,7 +87,10 @@ class App extends React.Component {
     return (
       <div className='App'>
         {this.state.loading ? (
-          <React.Fragment>Loading...</React.Fragment>
+          <div className='spinner'>
+            <i className='fa fa-cog fa-spin fa-3x fa-fw' />
+            <span className='sr-only'>Loading...</span>
+          </div>
         ) : (
           <React.Fragment>
             <Nav />
@@ -84,8 +102,8 @@ class App extends React.Component {
             <Footer />
           </React.Fragment>
         )}
-        <a onClick={this.scrollToTop}>
-          <Button className='to-the-top'>To the top!</Button>
+        <a onClick={this.scrollToTop} id='to-the-top'>
+          <i className='fa fa-chevron-up fa-2x' aria-hidden='true' />
         </a>
       </div>
     );

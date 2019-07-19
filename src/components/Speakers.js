@@ -20,7 +20,6 @@ const particlesOptions = {
 
 export default class Speakers extends React.Component {
   render() {
-    console.log(this.props.speakers);
     return (
       <div>
         <Particles className='particles' params={particlesOptions} />

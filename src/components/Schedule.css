@@ -8,13 +8,13 @@ table#schedule {
   width: auto;
   text-align: left;
   min-width: 640px;
-  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
 .table-dark td,
 .table-dark tr,
 .table-dark th {
-  border-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: transparent !important;
 }
 
 /* tr.bertha {
@@ -25,11 +25,11 @@ tr.carl {
 } */
 
 tr.bertha td.room {
-  color: #f3f64f;
+  color: rgba(255, 45, 153);
 }
 
 tr.carl td.room {
-  color: #3ef2ff;
+  color: #00adef;
 }
 
 div.schedule {
@@ -43,7 +43,7 @@ span.event {
 }
 
 a.active {
-  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
   border: 1px;
 }
 
@@ -54,7 +54,7 @@ ul.center-tabs {
 
 a.active span.wrapper {
   color: #fff;
-  background: linear-gradient(to right, #3ef2ff 10%, #f3f64f 50%, #50e605 70%);
+  background: linear-gradient(to right, #3ef2ff 10%, #f64fe0 50%, #a95df5 70%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;

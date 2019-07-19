@@ -1,17 +1,9 @@
 /* HTML ELEMENTS */
 /*  */
 body {
-  background: #005c97; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #352d8b,
-    #363795
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #352d8b,
-    #363795
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #4568dc;
+  background: -webkit-linear-gradient(to right, #4568dc, #b06ab3);
+  background: linear-gradient(to right, #4568dc, #b06ab3);
 
   margin: 0;
   padding: 0;

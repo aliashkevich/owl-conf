@@ -13,3 +13,7 @@ code {
 button {
   cursor: pointer;
 }
+
+* {
+  font-family: 'Times New Roman', Times, serif !important;
+}

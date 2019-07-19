@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
+import owl_icon from '../images/owl_icon.png';
 import {primary} from '../styles/styles';
+import './Header.css';
 
 const Wrapper = styled.header`
   display: flex;
   border: none;
-  color: black;
+  color: white;
   justify-content: center;
   height: 65px;
   background: linear-gradient(to right, #4568dc, #b06ab3);
@@ -24,7 +26,7 @@ const HeaderContainer = styled.div`
   height: 100%;
   max-width: 960px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 10px;
   cursor: pointer;
@@ -95,9 +97,11 @@ export default class Nav extends React.Component {
       <React.Fragment>
         <Wrapper>
           <HeaderContainer>
-            <Header href='/'>Owl Conference</Header>
             <NavList>
-              <NavItem href='/'>About</NavItem>
+              <NavItem>
+                <img className='owl_icon' src={owl_icon} alt='owl icon' />
+              </NavItem>
+              <NavItem href='/'>Home</NavItem>
               <NavItem href='/'>Speakers</NavItem>
               <NavItem href='/'>Schedule</NavItem>
               <NavItem href='/'>Jobs</NavItem>

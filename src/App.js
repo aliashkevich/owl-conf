@@ -3,7 +3,7 @@ import './App.css';
 import Home from './components/Home';
 import About from './components/About';
 import Speakers from './components/Speakers';
-import Footer from './components/Footer';
+
 import Jobs from './components/Jobs';
 import Address from './components/Address';
 import Schedule from './components/Schedule';
@@ -25,7 +25,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd')
+    fetch('https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3')
       .then(res => res.json())
       .then(data => {
         this.setState({

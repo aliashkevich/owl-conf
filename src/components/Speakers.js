@@ -25,7 +25,7 @@ export default class Speakers extends React.Component {
       <div>
         <Particles className='particles' params={particlesOptions} />
         <div>
-          <h1 className='title'>Speakers</h1>
+          <h2 className='title'>Speakers</h2>
           <div className='container'>
             {this.props.speakers.map(speaker => (
               <div className='items bg-gray dib br3 pa3 ma2 bw2 shadow-5 grow'>

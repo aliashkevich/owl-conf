@@ -49,7 +49,6 @@ class App extends React.Component {
           <React.Fragment>
             <Nav />
             <Home />
-            <Speakers />
             <Jobs />
             <Speakers speakers={this.state.speakers} />
             <Jobs />

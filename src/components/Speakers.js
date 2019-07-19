@@ -22,7 +22,7 @@ export default class Speakers extends React.Component {
   render() {
     console.log(this.props.speakers);
     return (
-      <div>
+      <div id='speakers_cards'>
         <Particles className='particles' params={particlesOptions} />
         <div>
           <h2 className='title'>Speakers</h2>

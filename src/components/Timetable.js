@@ -43,9 +43,7 @@ export default class Schedule extends React.Component {
           id: j,
           name: `${timeslotItem.topic.toUpperCase()} (${timeslotItem.venue})`,
           type: 'custom',
-          startTime: moment(
-            `${date}T${this.convertTime(timeslotItem.starttime)}`,
-          ),
+          startTime: moment(`${date}T${this.convertTime(timeslotItem.starttime)}`),
           endTime: moment(`${date}T${this.convertTime(timeslotItem.endtime)}`),
         };
         talks.push(talk);
@@ -82,7 +80,7 @@ export default class Schedule extends React.Component {
       return null;
     } else {
       return (
-        <div className='screen schedule'>
+        <div id='time_schedule' className='screen schedule'>
           <Timetable events={this.state.events} hoursInterval={[9, 21]} />
         </div>
       );

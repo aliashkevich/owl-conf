@@ -101,7 +101,7 @@ export default class Nav extends React.Component {
               <NavItem>
                 <img className='owl_icon' src={owl_icon} alt='owl icon' />
               </NavItem>
-              <NavItem href='/'>Home</NavItem>
+              <NavItem href='/Home.js'>Home</NavItem>
               <NavItem href='/'>Speakers</NavItem>
               <NavItem href='/'>Schedule</NavItem>
               <NavItem href='/'>Jobs</NavItem>

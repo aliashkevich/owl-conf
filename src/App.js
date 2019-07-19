@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
 import Home from './components/Home';
-import About from './components/About';
 import Speakers from './components/Speakers';
-
 import Jobs from './components/Jobs';
-import Address from './components/Address';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
 import Mapowl from './components/Map';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,13 +45,13 @@ class App extends React.Component {
           <React.Fragment>Loading...</React.Fragment>
         ) : (
           <React.Fragment>
-            <Nav />
-            <Home />
-            <Jobs />
-            <Speakers speakers={this.state.speakers} />
-            <Jobs />
-            <Schedule timetable={this.state.timetable} />
-            <Mapowl />
+            <Nav id='section1' />
+            <Home id='section2' />
+            <Jobs id='section3' />
+            <Speakers speakers={this.state.speakers} id='section4' />
+            <Jobs id='section1' />
+            <Schedule timetable={this.state.timetable} id='section5' />
+            <Mapowl id='section6' />
           </React.Fragment>
         )}
       </div>

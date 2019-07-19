@@ -8,6 +8,7 @@ import Jobs from './components/Jobs';
 import Address from './components/Address';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
+import Mapowl from './components/Map';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,10 +49,11 @@ class App extends React.Component {
           <React.Fragment>
             <Nav />
             <Home />
+            <Jobs />
             <Speakers speakers={this.state.speakers} />
-            <Address />
             <Jobs />
             <Schedule timetable={this.state.timetable} />
+            <Mapowl />
           </React.Fragment>
         )}
       </div>

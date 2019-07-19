@@ -50,15 +50,18 @@ class App extends React.Component {
             <Nav />
             <Home />
             <Speakers speakers={this.state.speakers} />
-            <Address />
-            <Jobs />
             <Schedule timetable={this.state.timetable} />
+<<<<<<< HEAD
             <About />
             <Speakers />
             <Timetable timetable={this.state.timetable} />
             <Jobs />
             <Mapowl />
             <Footer />
+=======
+            <Jobs />
+            <Mapowl />
+>>>>>>> feature-jobs
           </React.Fragment>
         )}
       </div>

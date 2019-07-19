@@ -3,7 +3,7 @@
   height: 100vh;
   background-image: url('../image/background.jpg');
   background-size: cover;
-  color: #4997d0;
+  /* color: #4997d0; */
   font-family: 'Helvetica Arial';
   /* background: linear-gradient(-45deg, #d9d6cf, #2d383a, #c8c8cd, #f0f5f5); */
   /* background-size: 150% 80%; */
@@ -14,13 +14,21 @@
 .map {
   display: flex;
   justify-content: center;
+  padding-right: 80px;
 }
 .card {
+  width: 40vw;
+  float: left;
+  margin-top: 200px;
+  margin-left: 50px;
+  opacity: 0.8;
+}
+.owl {
+  width: 40vw;
   float: right;
-  padding-top: 240px;
-  padding-right: 50px;
+  margin-top: 150px;
+  margin-left: 50px;
 }
 .title {
   justify-content: center;
-  color: green;
 }

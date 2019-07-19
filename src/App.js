@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Speakers from './components/Speakers';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
+import Jobs from './components/Jobs';
 import $ from 'jquery';
 import Mapowl from './components/Map';
 import {Events, animateScroll as scroll} from 'react-scroll';
@@ -86,6 +87,7 @@ class App extends React.Component {
             <Home />
             <Speakers speakers={this.state.speakers} />
             <Schedule timetable={this.state.timetable} />
+            <Jobs />
             <Mapowl />
           </React.Fragment>
         )}

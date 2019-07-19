@@ -55,6 +55,12 @@ a.active span.wrapper {
 
 span.wrapper {
   margin: 0px;
+  height: auto;
+}
+
+p.date {
+  padding: 0;
+  margin: 0;
 }
 
 @keyframes textclip {

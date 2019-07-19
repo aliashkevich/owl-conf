@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Home from './components/Home';
 import Speakers from './components/Speakers';
-import Footer from './components/Footer';
 import Jobs from './components/Jobs';
 import Address from './components/Address';
 import Schedule from './components/Schedule';
@@ -99,7 +98,6 @@ class App extends React.Component {
             <Schedule timetable={this.state.timetable} />
             <Address />
             <Jobs jobs={this.state.jobs} />
-            <Footer />
           </React.Fragment>
         )}
         <a onClick={this.scrollToTop} id='to-the-top'>

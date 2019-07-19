@@ -7,16 +7,8 @@ import Address from './components/Address';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
 import $ from 'jquery';
-
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from 'react-scroll';
+import Mapowl from './components/Map';
+import {Events, animateScroll as scroll} from 'react-scroll';
 
 class App extends React.Component {
   constructor(props) {
@@ -94,10 +86,11 @@ class App extends React.Component {
           <React.Fragment>
             <Nav />
             <Home />
+            <Jobs />
             <Speakers speakers={this.state.speakers} />
             <Schedule timetable={this.state.timetable} />
             <Address />
-            <Jobs jobs={this.state.jobs} />
+            <Mapowl />
           </React.Fragment>
         )}
         <a onClick={this.scrollToTop} id='to-the-top'>

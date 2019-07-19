@@ -5,7 +5,7 @@
   width: 100wh;
   height: 100vh;
   color: whitesmoke;
-  font-family: 'Helvetica';
+
   /* background: linear-gradient(-45deg, #d9d6cf, #2d383a, #c8c8cd, #f0f5f5); */
   background-size: 120% 120%;
   -webkit-animation: Gradient 15s ease infinite;
@@ -15,8 +15,17 @@
 .logo {
   display: flex;
   position: absolute;
-  bottom: 0;
-  right: 0px;
+  width: 15vw;
+  height: auto;
+  justify-content: flex-start;
+  top: 0;
+  margin: 15px;
+}
+.owl_logo {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  justify-items: center;
 }
 @-webkit-keyframes Gradient {
   0% {
@@ -53,34 +62,29 @@
   }
 }
 
-h1 {
-  font-family: 'Helvetica Arial';
+.home_title {
   font-weight: 300;
-  text-align: center;
-  position: absolute;
-  top: 20%;
-  right: 0;
-  left: 0;
+  font-size: 50px;
 }
 
-h2 {
-  font-family: 'Helvetica';
-  font-weight: 300;
-  text-align: center;
-  padding: 70px;
-  position: absolute;
-  top: 45%;
-  right: 0;
-  left: 0;
+.home_about {
+  font-weight: 50;
+  font-size: 20px;
 }
 
-h4 {
-  font-family: 'Helvetica';
-  font-weight: 100;
-  text-align: center;
-  padding: 17px;
-  position: absolute;
-  top: 45%;
-  margin: auto;
-  font-size: 1rem !important;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  margin: 10vw;
+}
+
+.owl_logo {
+  display: flex;
+  width: 45vh;
+  height: auto;
+  top: 1vh;
+  right: 38vw;
 }

@@ -20,7 +20,6 @@ body {
 p {
   color: white;
   font-size: 23px;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 span {
@@ -38,10 +37,10 @@ span {
 
 .container {
   display: flex;
-
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 15px;
   justify-content: center;
+  padding: 40px;
 }
 
 .items {

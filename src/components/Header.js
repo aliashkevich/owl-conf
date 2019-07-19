@@ -1,22 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
+import owl_icon from '../images/owl_icon.png';
 import {primary} from '../styles/styles';
+import './Header.css';
 
 const Wrapper = styled.header`
   display: flex;
   border: none;
-  color: black;
+  color: white;
   justify-content: center;
-  height: 72px;
-  background-color: transparent;
-
-  margin-bottom: 40px;
-  padding-bottom: 5px;
+  height: 65px;
+  background: linear-gradient(to right, #4568dc, #b06ab3);
+  opacity: 0.85;
+  bottom: 0;
   position: fixed;
   width: 100%;
-  top: 0;
   z-index: 99;
+  border-radius: 5px;
 `;
 
 const HeaderContainer = styled.div`
@@ -24,16 +25,19 @@ const HeaderContainer = styled.div`
   height: 100%;
   max-width: 960px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 10px;
+  cursor: pointer;
 `;
 
 const NavItem = styled.div`
-  color: #4997d0;
-  font-size: 20px;
+  color: #0000000;
+  font-size: 25px;
   padding: 20px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
   text-transform: capitalize;
   :hover {
     opacity: 0.5;
@@ -77,8 +81,8 @@ const StyledNavLink = styled(NavLink).attrs({
 
 const Header = styled.a`
   text-decoration: none;
-  color: #4997d0;
-  font-size: 20px;
+  color: #000000;
+  font-size: 25px;
   font-weight: 500;
   text-transform: capitalize;
   :hover {
@@ -92,8 +96,11 @@ export default class Nav extends React.Component {
       <React.Fragment>
         <Wrapper>
           <HeaderContainer>
-            <Header href='/'>Owl Conference</Header>
             <NavList>
+              <NavItem>
+                <img className='owl_icon' src={owl_icon} alt='owl icon' />
+              </NavItem>
+              <NavItem href='/'>Home</NavItem>
               <NavItem href='/'>Speakers</NavItem>
               <NavItem href='/'>Schedule</NavItem>
               <NavItem href='/'>Map</NavItem>

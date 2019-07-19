@@ -8,8 +8,8 @@ class Mapowl extends React.Component {
     return (
       <React.Fragment>
         <div className='body-map'>
-          <div className='title'>
-            <h1>Location</h1>
+          <div>
+            <h1 className='title'>Location</h1>
           </div>
           <div className='card'>
             <MapCard />

@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import Home from './components/Home';
 import Speakers from './components/Speakers';
-import Jobs from './components/Jobs';
-import Address from './components/Address';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
 import $ from 'jquery';
@@ -86,10 +84,8 @@ class App extends React.Component {
           <React.Fragment>
             <Nav />
             <Home />
-            <Jobs />
             <Speakers speakers={this.state.speakers} />
             <Schedule timetable={this.state.timetable} />
-            <Address />
             <Mapowl />
           </React.Fragment>
         )}

@@ -1,19 +1,9 @@
 /* HTML ELEMENTS */
 /*  */
 body {
-  background: #12c2e9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f64f59,
-    #c471ed,
-    #12c2e9
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f64f59,
-    #c471ed,
-    #12c2e9
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #4568dc;
+  background: -webkit-linear-gradient(to right, #4568dc, #b06ab3);
+  background: linear-gradient(to right, #4568dc, #b06ab3);
 
   margin: 0;
   padding: 0;
@@ -30,7 +20,6 @@ body {
 p {
   color: white;
   font-size: 23px;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 span {
@@ -48,10 +37,10 @@ span {
 
 .container {
   display: flex;
-
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 15px;
   justify-content: center;
+  padding: 40px;
 }
 
 .items {

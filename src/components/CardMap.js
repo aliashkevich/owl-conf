@@ -12,8 +12,9 @@ import map from '../image/map.png';
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 400,
-    background: '#AFC0D0',
+    background: 'rgba(175, 192, 208, 0.2)',
     color: 'white',
+    border: 'none',
   },
   media: {
     height: 0,
@@ -26,7 +27,7 @@ function MapCard() {
 
   return (
     <Card className={classes.card}>
-      <CardHeader title='MB.io Cafe' color='white' />
+      {/* <CardHeader title='MB.io Cafe' color='white' /> */}
       <a href='https://goo.gl/maps/fXBf5gF2nvWJEQF17' target='_blank'>
         <CardMedia className={classes.media} image={map} title='Location' />
       </a>

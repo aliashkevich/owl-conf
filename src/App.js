@@ -6,7 +6,7 @@ import Speakers from './components/Speakers';
 import Footer from './components/Footer';
 import Jobs from './components/Jobs';
 import Address from './components/Address';
-import Timetable from './components/Timetable';
+import Schedule from './components/Schedule';
 import Nav from './components/Header';
 import Mapowl from './components/Map';
 
@@ -54,6 +54,10 @@ class App extends React.Component {
             <Timetable timetable={this.state.timetable} />
             <Jobs />
             <Mapowl />
+            <Speakers speakers={this.state.speakers} />
+            <Address />
+            <Jobs />
+            <Schedule timetable={this.state.timetable} />
             <Footer />
           </React.Fragment>
         )}

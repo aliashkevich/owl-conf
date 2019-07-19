@@ -1,50 +1,68 @@
-.custom-tab {
-  margin: 0;
-  padding: 0 !important;
-}
-
 table#schedule {
-  /* max-width: 1280px; */
   display: inline-table;
   width: auto;
   text-align: left;
   min-width: 640px;
+  background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
-table#schedule tbody tr {
-  text-align: left;
+.table-dark td,
+.table-dark tr,
+.table-dark th {
+  border-color: transparent !important;
 }
 
 tr.bertha td.room {
-  /* background-color: dimgray; */
-  color: pink;
+  color: rgba(255, 45, 153);
 }
 
 tr.carl td.room {
-  /* background-color: grey; */
-  color: aquamarine;
+  color: #00adef;
 }
+
 div.schedule {
-  background-color: #343a40;
+  min-height: 100vh;
 }
 
 span.event {
   color: #fff;
   font-size: 20px;
 }
-a.nav-link:hover span.event {
-  color: aqua;
-  font-size: 20px;
-}
 
 a.active {
-  background-color: #343a40 !important;
-}
-
-a.active span {
-  color: greenyellow;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border: 1px;
 }
 
 ul.center-tabs {
   justify-content: center;
+  margin-top: 2rem;
+}
+
+a.active span.wrapper {
+  color: #fff;
+  background: linear-gradient(to right, #3ef2ff 10%, #f64fe0 50%, #a95df5 70%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 6s linear infinite;
+  display: inline-block;
+}
+
+span.wrapper {
+  margin: 0px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.nav-item {
+  cursor: pointer;
 }

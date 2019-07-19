@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import owl_icon from '../images/owl_icon.png';
@@ -104,8 +103,8 @@ export default class Nav extends React.Component {
               <NavItem href='/'>Home</NavItem>
               <NavItem href='/'>Speakers</NavItem>
               <NavItem href='/'>Schedule</NavItem>
-              <NavItem href='/'>Jobs</NavItem>
               <NavItem href='/'>Map</NavItem>
+              <NavItem href='/'>Jobs</NavItem>
             </NavList>
           </HeaderContainer>
         </Wrapper>

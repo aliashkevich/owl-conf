@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
 import Home from './components/Home';
-import About from './components/About';
 import Speakers from './components/Speakers';
-import Footer from './components/Footer';
-import Jobs from './components/Jobs';
-import Address from './components/Address';
 import Schedule from './components/Schedule';
 import Nav from './components/Header';
+import $ from 'jquery';
 import Mapowl from './components/Map';
+import {Events, animateScroll as scroll} from 'react-scroll';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,10 +20,12 @@ class App extends React.Component {
       about: {},
       loading: true,
     };
+
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   componentDidMount() {
-    fetch('https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd')
+    fetch('https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -38,13 +38,48 @@ class App extends React.Component {
         });
       })
       .catch(error => console.log(error));
+
+    Events.scrollEvent.register('begin', function() {
+      console.log('begin', arguments);
+    });
+
+    Events.scrollEvent.register('end', function() {
+      console.log('end', arguments);
+    });
+
+    var btn = $('#to-the-top');
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, '300');
+    });
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
   }
 
   render() {
     return (
       <div className='App'>
         {this.state.loading ? (
-          <React.Fragment>Loading...</React.Fragment>
+          <div className='spinner'>
+            <i className='fa fa-cog fa-spin fa-3x fa-fw' />
+            <span className='sr-only'>Loading...</span>
+          </div>
         ) : (
           <React.Fragment>
             <Nav />
@@ -64,6 +99,9 @@ class App extends React.Component {
 >>>>>>> feature-jobs
           </React.Fragment>
         )}
+        <a onClick={this.scrollToTop} id='to-the-top'>
+          <i className='fa fa-chevron-up fa-2x' aria-hidden='true' />
+        </a>
       </div>
     );
   }

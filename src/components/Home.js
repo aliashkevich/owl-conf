@@ -7,7 +7,7 @@ import './Home.css';
 export default class Home extends React.Component {
   render() {
     return (
-      <div className='body-home screen'>
+      <div id='home_path' className='body-home screen'>
         {/* <div className='car'>
           <img src={car} alt='car' />
         </div> */}

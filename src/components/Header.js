@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import owl_icon from '../images/owl_icon.png';
 import {primary} from '../styles/styles';
+import {SocialIcon} from 'react-social-icons';
 import './Header.css';
 
 const Wrapper = styled.header`
@@ -98,13 +99,31 @@ export default class Nav extends React.Component {
           <HeaderContainer>
             <NavList>
               <NavItem>
-                <img className='owl_icon' src={owl_icon} alt='owl icon' />
+                <a target='_blank' rel='noopener noreferrer' href='https://www.mercedes-benz.io/'>
+                  <img className='owl_icon' src={owl_icon} alt='owl icon' />
+                </a>
               </NavItem>
               <NavItem href='/'>Home</NavItem>
               <NavItem href='/'>Speakers</NavItem>
               <NavItem href='/'>Schedule</NavItem>
               <NavItem href='/'>Map</NavItem>
               <NavItem href='/'>Jobs</NavItem>
+              <NavItem href='/'>
+                <SocialIcon
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  url='https://www.linkedin.com/company/mercedes-benz.io/?originalSubdomain=de'
+                  fgColor='#ffffff'
+                />
+              </NavItem>
+              <NavItem href='/'>
+                <SocialIcon
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  url='https://twitter.com/mercedesbenzio?lang=de'
+                  fgColor='#ffffff'
+                />
+              </NavItem>
             </NavList>
           </HeaderContainer>
         </Wrapper>

@@ -21,7 +21,7 @@ const particlesOptions = {
 export default class Speakers extends React.Component {
   render() {
     return (
-      <div>
+      <div id='speakers_cards'>
         <Particles className='particles' params={particlesOptions} />
         <div>
           <h1 className='title'>Speakers</h1>

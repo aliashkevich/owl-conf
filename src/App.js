@@ -49,10 +49,9 @@ class App extends React.Component {
           <React.Fragment>
             <Nav />
             <Home />
-            <Jobs />
             <Speakers speakers={this.state.speakers} />
-            <Jobs />
             <Schedule timetable={this.state.timetable} />
+            <Jobs />
             <Mapowl />
           </React.Fragment>
         )}

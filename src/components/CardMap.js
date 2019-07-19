@@ -12,7 +12,7 @@ import map from '../image/map.png';
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 700,
-    background: 'rgba(175, 192, 208)',
+    background: '#696969',
   },
   media: {
     height: 0,

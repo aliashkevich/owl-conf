@@ -79,6 +79,7 @@
   flex-direction: column;
   align-content: center;
   margin: 10vw;
+  padding: 5px;
 }
 
 .owl_logo {

@@ -17,13 +17,6 @@ table#schedule {
   border-color: transparent !important;
 }
 
-/* tr.bertha {
-  background-color: rgba(222, 106, 207, 0.2) !important;
-}
-tr.carl {
-  background-color: rgba(106, 222, 201, 0.2) !important;
-} */
-
 tr.bertha td.room {
   color: rgba(255, 45, 153);
 }
@@ -33,7 +26,6 @@ tr.carl td.room {
 }
 
 div.schedule {
-  /* background-color: #343a40; */
   min-height: 100vh;
 }
 

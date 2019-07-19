@@ -1,6 +1,6 @@
 import React from 'react';
 import './Map.css';
-
+import owl from '../images/owl.png';
 import MapCard from './CardMap';
 
 class Mapowl extends React.Component {
@@ -14,10 +14,9 @@ class Mapowl extends React.Component {
           <div className='card'>
             <MapCard />
           </div>
-
-          {/* <h1>Owl Conference Location</h1>
-          <h3>MB.io Cafe</h3>
-          <img src={map} alt='map'  /> */}
+          <div>
+            <img src={owl} alt='logo' className='owl' />
+          </div>
         </div>
       </React.Fragment>
     );

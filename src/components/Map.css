@@ -14,13 +14,21 @@
 .map {
   display: flex;
   justify-content: center;
+  padding-right: 80px;
 }
 .card {
+  width: 40vw;
+  float: left;
+  margin-top: 200px;
+  margin-left: 50px;
+  opacity: 0.8;
+}
+.owl {
+  width: 40vw;
   float: right;
-  padding-top: 240px;
-  padding-right: 50px;
+  margin-top: 150px;
+  margin-left: 50px;
 }
 .title {
   justify-content: center;
-  color: green;
 }

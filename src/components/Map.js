@@ -1,44 +1,27 @@
 import React from 'react';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import './Map.css';
+
+import MapCard from './CardMap';
 
 class Mapowl extends React.Component {
-  state = {
-    showingInfoWindow: false,
-    activeMarker: {},
-    selectedPlace: {},
-  };
-
-  onMarkerClick = (props, marker, e) =>
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true,
-    });
-
-  onMapClicked = props => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null,
-      });
-    }
-  };
   render() {
     return (
-      <Map google={this.props.google} zoom={10}>
-        <Marker onClick={this.onMarkerClick} name={'germany'} />
-
-        <InfoWindow onClose={this.onInfoWindowClose}>
-          <div>
-            <h1>{this.state.selectedPlace.germany}</h1>
+      <React.Fragment>
+        <div className='body-map'>
+          <div className='title'>
+            <h1>Location</h1>
           </div>
-        </InfoWindow>
-      </Map>
+          <div className='card'>
+            <MapCard />
+          </div>
+
+          {/* <h1>Owl Conference Location</h1>
+          <h3>MB.io Cafe</h3>
+          <img src={map} alt='map'  /> */}
+        </div>
+      </React.Fragment>
     );
   }
 }
-//
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyD6esplI5T6jo_KauuSUz7rILmXSfWBdTs',
-})(Mapowl);
+export default Mapowl;
